@@ -1,0 +1,159 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #cbcdcf, #98a2a2);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Container Styling */
+.container {
+    background: white;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    flex: 1 1 auto;
+    width: 70%;
+    max-width: 300px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="submit"] {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Weather Data Styling */
+#weather-data {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.icon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.details > div {
+    background: #f1f1f1;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    flex: 1 1 140px;
+    max-width: 140px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    form input[type="text"],
+    form input[type="submit"] {
+        width: 100%;
+    }
+
+    .details > div {
+        flex: 1 1 120px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .temperature {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .details > div {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
